@@ -56,6 +56,7 @@ button {
 ul {
     list-style: none;
     width: 0;
+    height: 100vh;
     position: fixed;
     top: 0;
     margin-top: 0;
@@ -66,18 +67,13 @@ ul {
     padding-bottom: 0;
     padding-left: 0;
     z-index: 2;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
 }
 ul li {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 15px;
     padding-right: 15px;
-    border-top: 1px solid #e9edc9;
-}
-ul li:first-child {
-    border-top: none;
+    border-bottom: 1px solid #e9edc9;
 }
 .main {
     background: linear-gradient(to bottom, #F5F5F5, #F0F8FF);
@@ -91,23 +87,22 @@ ul li:first-child {
     align-items: center;
 }
 .social-media-icons a {
-    margin-left: 1vw;
-    margin-right: 1vw;
+    margin-left: calc(2px + 1vw);
+    margin-right: calc(2px + 1vw);
 }
-figure {
-    width: 40vw;
-    min-width: 350px;
-    justify-self: center;
+.self-photo {
+    height: calc(100px + 20vw);
+    position: relative;
     margin: 0, auto;
-    aspect-ratio: 1.2 / 1;
+    padding-bottom: calc(15px + 1vw);
     overflow: hidden;
     align-content: center;
     text-align: center;
-    border: 2px solid red;
 }
-figure img {
-    width: 70%;
-    object-fit: cover;
+.self-photo img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
 }
 article {
     margin-left: 0;
@@ -168,7 +163,7 @@ article::first-letter {
     align-self: center;
 }
 .fa-brands, .fa-solid {
-    font-size: calc(20px + 3vw);
+    font-size: calc(30px + 2vw);
 }
 iframe {
     margin-top: 30px;
@@ -270,6 +265,6 @@ a:not(.social-media-icons a):hover::before {
         justify-self: left;
     }
     .fa-brands, .fa-solid {
-        font-size: calc(23px + 2.5vw);
+        font-size: calc(25px + 2.5vw);
     }
 }

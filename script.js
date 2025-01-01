@@ -4,7 +4,7 @@ sidebarButton.addEventListener("click", toggleSidebar);
 function toggleSidebar() {
     if (sidebarButton.innerHTML === '<i class="fa-solid fa-bars"></i>') {
         sidebarButton.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-        sidebar.style.width = "calc(150px + 5vw)";
+        sidebar.style.width = "calc(200px + 5vw)";
     } else {
         reset();
     }
