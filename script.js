@@ -14,10 +14,3 @@ function reset() {
     sidebarButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
     sidebar.style.width = "0";
 }
-
-// Update viewport height when resizing
-window.addEventListener("resize", updateViewportHeight);
-function updateViewportHeight() {
-    const vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-}
