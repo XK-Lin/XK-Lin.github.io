@@ -5,6 +5,7 @@ body {
     font-weight: 400;
     font-style: normal;
     min-width: 600px;
+    overflow: ;
 }
 .navigation {
     font-weight: 600;
@@ -14,10 +15,10 @@ body {
     top: 0;
     background-color: rgba(233, 237, 201, 0.8);
     backdrop-filter: blur(4px);
-    font-size: 2rem;
+    font-size: 2.5rem;
     justify-content: space-between;
     align-items: center;
-    height: 5rem;
+    height: 7rem;
     margin-top: 0;
     margin-bottom: 0;
     z-index: 2;
@@ -53,27 +54,26 @@ button {
     margin-right: 3vw;
     z-index: 3;
 }
-ul {
+nav ul {
     list-style: none;
+    position: fixed;
     width: 0;
     height: 200vh;
-    position: fixed;
     top: 0;
-    margin-top: 0;
+    margin: 0;
     right: 0;
     background-color: rgb(200, 204, 170);
     transition: 0.3s;
-    padding-top: 5rem;
+    padding-top: 7rem;
     padding-bottom: 0;
     padding-left: 0;
     z-index: 2;
 }
-ul li {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-bottom: 1px solid #e9edc9;
+nav ul li {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    border-bottom: 2px solid #e9edc9;
 }
 .main {
     background: linear-gradient(to bottom, #F5F5F5, #F0F8FF);
@@ -87,11 +87,11 @@ ul li {
     align-items: center;
 }
 .social-media-icons a {
-    margin-left: calc(2px + 1vw);
-    margin-right: calc(2px + 1vw);
+    margin-left: calc(8px + 0.5vw);
+    margin-right: calc(8px + 0.5vw);
 }
 .self-photo {
-    height: calc(100px + 20vw);
+    height: calc(350px + 10vw);
     position: relative;
     margin: 0, auto;
     padding-top: 10px;
@@ -109,22 +109,23 @@ article {
     margin-left: 0;
     padding-top: 1vw;
     padding-bottom: 2vw;
-}
-p {
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: normal;
     font-family: "Handlee", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     letter-spacing: 1px;
     margin-left: 3vw;
     margin-right: 3vw;
 }
 article::first-letter {
-    font-size: 2.5em;
+    font-size: 2.6em;
     float: left;
     line-height: 1;
     margin-top: 3px;
-    margin-bottom: -10px;
+    margin-bottom: -15px;
     margin-right: 10px;
 }
 .contact {
@@ -136,13 +137,13 @@ article::first-letter {
 #contact-header {
     text-align: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: 5rem;
     min-width: 30vw;
     padding-top: 1rem;
     padding-bottom: 30px;
 }
 .contact-body {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     text-align: center;
     align-items: center;
 }
@@ -151,8 +152,8 @@ article::first-letter {
     grid-template-columns: 1fr 4fr;
     grid-template-rows: repeat(3, 1fr);
     row-gap: 15px;
+    margin: 0 auto;
     width: 80%;
-    justify-self: center;
 }
 .contact-info > :nth-child(2n) {
     text-align: left;
@@ -164,7 +165,7 @@ article::first-letter {
     align-self: center;
 }
 .fa-brands, .fa-solid {
-    font-size: calc(30px + 2vw);
+    font-size: calc(70px + 1vw);
 }
 iframe {
     margin-top: 30px;
@@ -172,7 +173,7 @@ iframe {
 footer {
     background-color: #F0F8FF;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -209,16 +210,20 @@ a:not(.social-media-icons a):hover::before {
     text-shadow: 0 0 10px hsla(196, 61%, 58%, .75), 0 0 20px hsla(196, 61%, 58%, .75), 0 0 30px hsla(196, 61%, 58%, .75);
 }
 @media screen and (min-width: 1000px) {
+    .navigation {
+        height: 5rem;
+        font-size: 2rem;
+    }
     header {
         margin-left: calc(6vw - 18px);
     }
     #sidebar-button {
         display: none;
     }
-    ul, ul li {
+    nav ul, nav ul li {
         all: unset;
     }
-    ul {
+    nav ul {
         display: flex;
         list-style: none;
         padding-top: 0;
@@ -227,7 +232,7 @@ a:not(.social-media-icons a):hover::before {
         margin-bottom: 0;
         margin-right: 3vw;
     }
-    ul li {
+    nav ul li {
         margin-top: 0;
         margin-bottom: 0;
         margin-left: 15px;
@@ -235,17 +240,24 @@ a:not(.social-media-icons a):hover::before {
     }
     .main {
         display: flex;
-    }
-    figure {
-        width: 30vw;
-        justify-self: normal;
+        padding-left: 5vw;
+        padding-right: 5vw;
     }
     .self-info {
         display: inline;
-        margin-left: 5vw;
+    }
+    .self-photo {
+        height: calc(200px + 10vw);
+    }
+    .social-media-icons a {
+        margin-left: calc(4px + 0.5vw);
+        margin-right: calc(4px + 0.5vw);
     }
     article {
-        margin-right: 5vw;
+        padding-left: 6vw;
+        padding-right: 0;
+        margin-right: 0;
+        font-size: 1.8rem;
     }
     .contact {
         display: flex;
@@ -253,11 +265,13 @@ a:not(.social-media-icons a):hover::before {
     #contact-header {
         display: inline;
         text-align: right;
+        font-size: 4rem;
         padding-right: 5vw;
         padding-bottom: 0;
     }
     .contact-body {
         text-align: left;
+        font-size: 1.5rem;
         max-width: 600px;
         padding-left: 5vw;
     }
@@ -267,6 +281,9 @@ a:not(.social-media-icons a):hover::before {
     }
     .fa-brands, .fa-solid {
         font-size: calc(25px + 2.5vw);
+    }
+    footer {
+        font-size: 1.2rem;
     }
 }
 @media (orientation: portrait) {
