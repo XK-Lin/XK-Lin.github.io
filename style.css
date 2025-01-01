@@ -268,3 +268,13 @@ a:not(.social-media-icons a):hover::before {
         font-size: calc(25px + 2.5vw);
     }
 }
+@media (orientation: portrait) {
+    body {
+        width: 100%;
+    }
+}
+@media (orientation: landscape) {
+    body {
+        width: 100%;
+    }
+}
