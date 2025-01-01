@@ -98,13 +98,12 @@ figure {
     width: 40vw;
     min-width: 350px;
     justify-self: center;
-    margin-left: 2vw;
-    margin-right: 2vw;
-    margin-bottom: 0;
+    margin: 0, auto;
     aspect-ratio: 1.2 / 1;
     overflow: hidden;
     align-content: center;
     text-align: center;
+    border: 2px solid red;
 }
 figure img {
     width: 70%;
