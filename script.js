@@ -53,6 +53,7 @@ document.addEventListener("click", (event) => {
         closeSidebar();
     }
 });
+
 // Close sidebar on viewport resize or orientation change
 function handleMediaQueryChange(event) {
     if (!event.matches) {
@@ -66,3 +67,18 @@ function handleMediaQueryChange(event) {
 }
 mediaQuery.addEventListener("change", handleMediaQueryChange);
 handleMediaQueryChange(mediaQuery);
+
+// Fetch and display the total visit count
+function updateVisitCount() {
+    fetch("https://web-stats.onrender.com/total-visits")
+        .then((response) => response.json())
+        .then((data) => {
+            const visitCountElement = document.getElementById("total-visits");
+            visitCountElement.textContent = `Total Visits: ${data.totalVisits}`;
+        })
+        .catch((error) => {
+            console.error("Error fetching total visits:", error);
+            const visitCountElement = document.getElementById("total-visits");
+            visitCountElement.textContent = "Error loading visits.";
+        });
+}
