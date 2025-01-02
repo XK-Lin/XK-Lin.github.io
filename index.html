@@ -83,18 +83,18 @@
         </footer>
         <script>
             fetch('https://web-stats.onrender.com/visit', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                page: window.location.pathname,
-                time: new Date().toISOString()
-              }),
-            })
-              .then((response) => response.json())
-              .then((data) => console.log('Visit logged:', data))
-              .catch((error) => console.error('Error logging visit:', error));
-          </script>
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    page: window.location.pathname,
+                    time: new Date().toISOString()
+                }),
+                })
+                .then((response) => response.json())
+                .then((data) => console.log('Visit logged:', data))
+                .catch((error) => console.error('Error logging visit:', error));
+        </script>
     </body>
 </html>
