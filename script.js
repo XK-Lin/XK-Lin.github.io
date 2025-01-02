@@ -82,3 +82,4 @@ function updateVisitCount() {
             visitCountElement.textContent = "Error loading visits.";
         });
 }
+updateVisitCount();
